@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import CardSkeleton from "@/components/skeletons/CardSkeleton";
+import HomeSkeleton from "@/components/skeletons/HomeSkeleton";
 import { useFetch } from "@/hooks/useFetch";
 import {
   getCurrencyName,
@@ -20,15 +20,7 @@ const CountryDetailPage = () => {
     error,
   }: TApiResponse = useFetch(`name/${param.country}`);
 
-  if (loading || !singleCountry)
-    return (
-      <div className="flex flex-wrap justify-center md:justify-between gap-6 sm:gap-4 lg:gap-6">
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-      </div>
-    );
+  if (loading || !singleCountry) return <HomeSkeleton />;
 
   if (error) return <h1>{error}</h1>;
 
@@ -49,7 +41,7 @@ const CountryDetailPage = () => {
     <div className="p-4 md:p-16 lg:px-24 pt-4">
       <Button title={"Back"} isBack={true} />
       <div className="mt-10 flex flex-col gap-6 items-center justify-center md:flex-row md:justify-between ">
-        {/* FLAG CONTAINER */}
+        {/* FLAG IMAGE CONTAINER */}
         <div className="w-full flex justify-center md:w-1/2">
           <Image
             src={flags.png}
@@ -70,19 +62,39 @@ const CountryDetailPage = () => {
             <div className="flex flex-col gap-2">
               <p className="text-xs">
                 Native Name:{" "}
-                {name && name.nativeName && getNativeName(name.nativeName)}
+                <span className="text-dark-gray">
+                  {name && name.nativeName && getNativeName(name.nativeName)}
+                </span>
               </p>
-              <p className="text-xs">Population: {population}</p>
-              <p className="text-xs">Region: {region}</p>
-              <p className="text-xs">Sub Region: {subregion}</p>
-              <p className="text-xs">Capital: {capital[0]}</p>
+              <p className="text-xs">
+                Population: <span className="text-dark-gray">{population}</span>
+              </p>
+              <p className="text-xs">
+                Region: <span className="text-dark-gray">{region}</span>
+              </p>
+              <p className="text-xs">
+                Sub Region: <span className="text-dark-gray">{subregion}</span>
+              </p>
+              <p className="text-xs">
+                Capital: <span className="text-dark-gray">{capital[0]}</span>
+              </p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-xs">Top Level Domain: {tld}</p>
               <p className="text-xs">
-                Currencies: {currencies && getCurrencyName(currencies)}
+                Top Level Domain: <span className="text-dark-gray">{tld}</span>
               </p>
-              <p className="text-xs">Languages: {getLanguageName(languages)}</p>
+              <p className="text-xs">
+                Currencies:{" "}
+                <span className="text-dark-gray">
+                  {currencies && getCurrencyName(currencies)}
+                </span>
+              </p>
+              <p className="text-xs">
+                Languages:{" "}
+                <span className="text-dark-gray">
+                  {getLanguageName(languages)}
+                </span>
+              </p>
             </div>
           </div>
 

@@ -17,6 +17,11 @@ declare type CountryItemProps = {
   capital: string;
 };
 
+declare type CountryListProps = {
+  inputValue: string;
+  region: string;
+};
+
 declare type Currencies = {
   [key: string]: {
     name: string;
@@ -101,4 +106,12 @@ declare type CountryProps = {
   capitalInfo: {
     latlng: [number, number];
   };
+};
+
+declare type TInputProps = {
+  onInputChange: (value: string) => void;
+};
+
+declare type TSelectProps = {
+  onRegionChange: (value: string) => void;
 };
