@@ -21,7 +21,7 @@ const CountryItem = ({ countryItem }: CountryItemProps) => {
           className="object-fill w-full h-full"
         />
       </div>
-      <div className="p-8 bg-dark-blue shadow-md text-white rounded-b-md">
+      <div className="p-8 bg-white text-very-dark-blue-lm dark:bg-dark-blue shadow-md dark:text-white rounded-b-md">
         <h1 className="font-semibold mb-4">{countryItem.name.common}</h1>
         <p className="text-xs mb-2">
           Population:{" "}

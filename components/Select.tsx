@@ -43,7 +43,7 @@ const Select = ({ onRegionChange }: TSelectProps) => {
     <div className="relative" ref={selectDropdownRef}>
       <div
         onClick={() => setOpen((prevState) => !prevState)}
-        className="w-40 h-10 cursor-pointer rounded-md bg-dark-blue text-xs text-white px-4 flex items-center justify-between"
+        className="w-40 h-10 cursor-pointer rounded-md shadow-md bg-white dark:bg-dark-blue text-xs text-dark-gray dark:text-white px-4 flex items-center justify-between"
       >
         <p>{selectedValue !== "" ? selectedValue : "Filter by Region"}</p>
         <ChevronDownIcon className="h-4 w-4" />
@@ -51,10 +51,10 @@ const Select = ({ onRegionChange }: TSelectProps) => {
 
       {open && (
         <div>
-          <ul className="absolute w-40 h-36 mt-1 py-4 bg-dark-blue text-xs text-white rounded-md shadow-md">
+          <ul className="absolute w-40 h-36 mt-1 py-4 bg-white dark:bg-dark-blue text-xs text-dark-gray dark:text-white rounded-md shadow-md">
             {regions.map((region) => (
               <li
-                className="py-1 px-4 cursor-pointer hover:bg-dark-gray"
+                className="py-1 px-4 cursor-pointer hover:bg-very-light-gray dark:hover:bg-dark-gray"
                 key={region.name}
                 onClick={() => {
                   handleRegionChange(region.value);

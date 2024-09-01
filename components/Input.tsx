@@ -7,7 +7,7 @@ const Input = ({ onInputChange }: TInputProps) => {
   };
 
   return (
-    <div className="h-10 md:w-80 rounded-md bg-dark-blue text-xs text-white px-4 flex items-center gap-4">
+    <div className="h-10 md:w-80 rounded-md bg-white dark:bg-dark-blue text-xs dark:text-dark-gray px-4 flex items-center gap-4 shadow-md">
       <div>
         <MagnifyingGlassIcon className="w-4 h-4" />
       </div>
@@ -16,7 +16,7 @@ const Input = ({ onInputChange }: TInputProps) => {
         type="text"
         id="search"
         onChange={handleInputChange}
-        className="bg-dark-blue h-full outline-none w-full placeholder-white"
+        className="bg-white dark:bg-dark-blue h-full outline-none w-full placeholder-dark-gray dark:placeholder-white text-dark-gray dark:text-white"
         placeholder="Search for a country..."
       />
     </div>
