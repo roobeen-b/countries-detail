@@ -18,11 +18,11 @@ const CardSkeleton = () => {
           <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
         </svg>
       </div>
-      <div className="p-8 bg-dark-blue shadow-md text-white rounded-b-md">
-        <h1 className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></h1>
-        <h1 className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></h1>
-        <h1 className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></h1>
-        <h1 className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></h1>
+      <div className="p-8 text-white rounded-b-md">
+        <h1 className="h-2.5 bg-gray-200 rounded-full w-48 mb-4"></h1>
+        <h1 className="h-2.5 bg-gray-200 rounded-full w-48 mb-4"></h1>
+        <h1 className="h-2.5 bg-gray-200 rounded-full w-48 mb-4"></h1>
+        <h1 className="h-2.5 bg-gray-200 rounded-full w-48 mb-4"></h1>
       </div>
 
       <span className="sr-only">Loading...</span>

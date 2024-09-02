@@ -52,6 +52,10 @@ declare type Maps = {
   openStreetMaps: string;
 };
 
+declare type TBorderProp = {
+  [key: string]: string[];
+};
+
 declare type CountryProps = {
   name: {
     common: string;
