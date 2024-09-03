@@ -10,7 +10,7 @@ const CountryItem = ({ countryItem }: CountryItemProps) => {
   return (
     <Link
       href={`/country-detail/${countryItem.name.common}`}
-      className="rounded-md"
+      className="rounded-md hover:scale-[1.01] transition ease-in"
     >
       <div className="w-64 h-40 overflow-hidden rounded-t-md">
         <Image
@@ -18,10 +18,10 @@ const CountryItem = ({ countryItem }: CountryItemProps) => {
           alt="Flag"
           width={260}
           height={150}
-          className="object-fill w-full h-full"
+          className="object-fill w-full h-full border border-dark-gray"
         />
       </div>
-      <div className="p-8 bg-white text-very-dark-blue-lm dark:bg-dark-blue shadow-md dark:text-white rounded-b-md">
+      <div className="p-8 w-64 bg-white text-very-dark-blue-lm dark:bg-dark-blue shadow-md dark:text-white rounded-b-md">
         <h1 className="font-semibold mb-4">{countryItem.name.common}</h1>
         <p className="text-xs mb-2">
           Population:{" "}

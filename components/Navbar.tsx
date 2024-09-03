@@ -7,7 +7,7 @@ import Link from "next/link";
 const Navbar = () => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
-    <div className="px-4 md:px-16 lg:px-24 h-20 flex items-center justify-between bg-white dark:bg-dark-blue text-very-dark-blue-lm dark:text-white">
+    <nav className="px-4 md:px-16 lg:px-24 h-20 flex items-center justify-between bg-white dark:bg-dark-blue text-very-dark-blue-lm dark:text-white">
       <div className="text-md font-semibold">
         <Link href={"/"}>Where in the world?</Link>
       </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
           <MoonIcon className="w-3 h-3" /> Dark Mode
         </button>
       )}
-    </div>
+    </nav>
   );
 };
 

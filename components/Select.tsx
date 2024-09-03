@@ -46,7 +46,13 @@ const Select = ({ onRegionChange }: TSelectProps) => {
         className="w-40 h-10 cursor-pointer rounded-md shadow-md bg-white dark:bg-dark-blue text-xs text-dark-gray dark:text-white px-4 flex items-center justify-between"
       >
         <p>{selectedValue !== "" ? selectedValue : "Filter by Region"}</p>
-        <ChevronDownIcon className="h-4 w-4" />
+        <ChevronDownIcon
+          className={`h-4 w-4 ${
+            open
+              ? "-rotate-90 transition ease-in"
+              : "rotate-0 transition ease-in"
+          }`}
+        />
       </div>
 
       {open && (
